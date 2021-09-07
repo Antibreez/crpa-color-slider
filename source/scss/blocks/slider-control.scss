@@ -1,0 +1,38 @@
+.slider-control {
+  display: flex;
+  align-items: center;
+
+  &__slider-group {
+    flex-shrink: 0;
+    margin-right: 20px;
+    width: 400px;
+
+    .slider {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__text {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+}
+
+@include mobile {
+  .slider-control {
+    flex-direction: column;
+
+    &__slider-group {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+
+    &__text {
+      margin: 0 auto;
+    }
+  }
+}

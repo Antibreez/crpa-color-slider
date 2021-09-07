@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Color Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.min.css" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Слайдер</h1>
+
+    <section class="btn-control">
+      <fieldset>
+        <legend>Select:</legend>
+        <button class="btn btn-control__color">color</button>
+        <button class="btn btn-secondary btn-control__bg-color">backgroundColor</button>
+      </fieldset>
+    </section>
+
+    <section class="slider-control">
+      <div class="slider-control__slider-group">
+        <div class="slider slider--red">
+          <div class="slider__box">
+            <div class="slider__line"></div>
+            <div class="slider__drag"></div>
+          </div>
+        </div>
+        <div class="slider slider--green">
+          <div class="slider__box">
+            <div class="slider__line"></div>
+            <div class="slider__drag"></div>
+          </div>
+        </div>
+        <div class="slider slider--blue">
+          <div class="slider__box">
+            <div class="slider__line"></div>
+            <div class="slider__drag"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-control__text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, saepe.
+      </div>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

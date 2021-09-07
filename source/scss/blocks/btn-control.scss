@@ -1,0 +1,20 @@
+.btn-control {
+  margin-bottom: 50px;
+
+  button {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+@include mobile {
+  .btn-control {
+    button {
+      margin: 10px 0;
+      display: block;
+      width: 100%;
+    }
+  }
+}

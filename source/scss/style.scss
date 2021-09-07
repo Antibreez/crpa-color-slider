@@ -1,0 +1,15 @@
+// vendor
+
+// general
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/fonts.scss";
+@import "general/global.scss";
+
+//components
+@import "components/btn.scss";
+
+// blocks
+@import "blocks/slider-control.scss";
+@import "blocks/slider.scss";
+@import "blocks/btn-control.scss";

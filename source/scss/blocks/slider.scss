@@ -1,0 +1,60 @@
+.slider {
+  &__box {
+    position: relative;
+    width: 100%;
+    height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      border: 1px solid red;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: red;
+    transform: translateY(-50%);
+  }
+
+  &__drag {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.slider--green {
+  .slider__box::before {
+    border-color: green;
+  }
+
+  .slider__line {
+    background-color: green;
+  }
+}
+
+.slider--blue {
+  .slider__box::before {
+    border-color: blue;
+  }
+
+  .slider__line {
+    background-color: blue;
+  }
+}
