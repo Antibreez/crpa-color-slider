@@ -1,6 +1,5 @@
 (function() {
-  const $colorBtn = $('.btn-control__color');
-  const $bgColorBtn = $('.btn-control__bg-color');
+  const $colorTypeRadio = $('input[name="color-type"]');
 
   const $text = $('.slider-control__text');
 
@@ -19,6 +18,7 @@
   let redValue = 0;
   let greenValue = 0;
   let blueValue = 0;
+  let currentColorControl = $('input[name="color-type"]:checked').val();
 
   function getColor() {
     return `rgb(${redValue}, ${greenValue}, ${blueValue})`
@@ -30,8 +30,7 @@
       containment: box,
       drag: function() {
         line.css('width', drag.position().left + drag.width() / 2 + 'px')
-      },
-      stop: function(e, ui) {
+
         const x1 = drag.position().left;
 
         const colorValue = Math.round(x1 * 255 / (box.width() - drag.outerWidth()));
@@ -43,17 +42,18 @@
           : colorType === 'blue'
           ? blueValue = colorValue
           : null;
+
+        $text.css(currentColorControl, getColor());
+      },
+      stop: function(e, ui) {
       }
     }
   }
 
-  $colorBtn.on('click', function() {
-    $text.css('color', getColor());
-  });
-
-  $bgColorBtn.on('click', function() {
-    $text.css('background-color', getColor());
-  });
+  $colorTypeRadio.on('change', function(e) {
+    currentColorControl = $(e.target).val();
+    $text.css(currentColorControl, getColor());
+  })
 
   $redDrag.draggable(getSliderOptions($redBox, $redDrag, $redLine, 'red'));
   $greenDrag.draggable(getSliderOptions($greenBox, $greenDrag, $greenLine, 'green'));

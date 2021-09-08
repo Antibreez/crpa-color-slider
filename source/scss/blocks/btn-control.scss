@@ -9,6 +9,28 @@
   }
 }
 
+.btn-control__label {
+  span {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    color: darkblue;
+    min-width: 100px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  input:checked ~ span {
+    background-color: darkblue;
+    color: #fff;
+  }
+}
+
 @include mobile {
   .btn-control {
     button {

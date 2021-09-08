@@ -18,8 +18,14 @@
     <section class="btn-control">
       <fieldset>
         <legend>Select:</legend>
-        <button class="btn btn-control__color">color</button>
-        <button class="btn btn-secondary btn-control__bg-color">backgroundColor</button>
+        <label class="btn-control__label  btn-control__color">
+          <input type="radio" name="color-type" value="color" class="visually-hidden" checked>
+          <span>color</span>
+        </label>
+        <label class="btn-control__label  btn-control__bg-color">
+          <input type="radio" name="color-type" value="background-color" class="visually-hidden">
+          <span>backgroundColor</span>
+        </label>
       </fieldset>
     </section>
 
@@ -53,6 +59,7 @@
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/vendor.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 </html>
